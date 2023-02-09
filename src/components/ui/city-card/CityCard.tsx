@@ -1,5 +1,4 @@
-import React from 'react'
-import { City } from '../../../shared/models/City.model'
+import { City } from '../../../shared/models/City.model';
 
 function CityCard(props: {city: City}) {
   return (

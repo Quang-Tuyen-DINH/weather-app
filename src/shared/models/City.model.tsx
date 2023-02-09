@@ -1,3 +1,5 @@
+import { Weather } from "./Weather.model"
+
 export interface City {
   coord: {
     lat: number,
@@ -21,11 +23,4 @@ export interface City {
     deg: number,
     speed: number
   }
-};
-
-interface Weather {
-  description: string,
-  icon: string,
-  id: number,
-  main: string
 };
