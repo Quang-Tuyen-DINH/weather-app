@@ -10,7 +10,7 @@ function CityCard(props: {city: City}) {
           <span className='sesamm-app__city__left__country__name'>{props.city.sys.country}</span>
           <img
             className='sesamm-app__city__left__country__flag-icon'
-            src={`https://openweathermap.org/images/flags/${props.city.sys.country.toLowerCase()}.png`}
+            src={`${process.env.REACT_APP_FLAG_API}/${props.city.sys.country.toLowerCase()}.png`}
             alt={props.city.sys.country}
           />
         </div>
@@ -19,7 +19,7 @@ function CityCard(props: {city: City}) {
         <div className='sesamm-app__city__right__weather'>
           <img
             className='sesamm-app__city__right__weather__icon'
-            src={`https://openweathermap.org/img/wn/${props.city.weather[0].icon}@2x.png`}
+            src={`${process.env.REACT_APP_ICON_API}/${props.city.weather[0].icon}@2x.png`}
             alt={props.city.weather[0].main}
           />
           <span className='sesamm-app__city__right__weather__temp'>{props.city.weather[0].main}</span>

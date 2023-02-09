@@ -15,6 +15,11 @@
     &__name {
       font-size: 20px;
       font-weight: 500;
+      
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     &__country {
       &__name {
