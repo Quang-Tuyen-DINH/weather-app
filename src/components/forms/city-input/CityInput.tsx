@@ -7,23 +7,23 @@ function CityInput(props: {
 const [city, setCity] = useState<string>('');
 const [appId, setAppId] = useState<string>('');
 
-useEffect(() => {
-  window.addEventListener('keydown', event => {
-    if(event.key === 'Enter') {
-      handleSearch();
-    }
-  })
-}, [])
-
 const handleSearch = () => {
+  console.log(city)
+  console.log(appId)
   props.searchCity({
     city: city,
     appId: appId
   });
 }
 
+const handleKeyDown = (event: any) => {
+  if(event.key === 'Enter') {
+    handleSearch();
+  }
+}
+
   return (
-    <div className='sesamm-app__city-input'>
+    <div className='sesamm-app__city-input' onKeyDown={handleKeyDown}>
       <div className='sesamm-app__city-input__inputs'>
         <div className='sesamm-app__city-input__inputs__city-name'>
           <label className='sesamm-app__city-input__inputs__city-name__label'>City name</label>
