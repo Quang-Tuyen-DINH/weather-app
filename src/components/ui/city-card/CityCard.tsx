@@ -1,4 +1,5 @@
 import { City } from '../../../shared/models/City.model';
+import './CityCard.scss';
 
 function CityCard(props: {city: City}) {
   return (
@@ -24,8 +25,9 @@ function CityCard(props: {city: City}) {
           <span className='sesamm-app__city__right__weather__temp'>{props.city.weather[0].main}</span>
         </div>
         <div className='sesamm-app__city__right__coordinations'>
-          <span className='sesamm-app__city__right__coordinations__lat'>{props.city.coord.lat}</span>
-          <span className='sesamm-app__city__right__coordinations__lon'>{props.city.coord.lon}</span>
+          <span className='sesamm-app__city__right__coordinations__lat'>Lat: {props.city.coord.lat}</span>
+          <br />
+          <span className='sesamm-app__city__right__coordinations__lon'>Long: {props.city.coord.lon}</span>
         </div>
       </div>
     </div>

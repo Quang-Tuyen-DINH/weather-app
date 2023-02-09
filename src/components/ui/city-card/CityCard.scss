@@ -1,0 +1,35 @@
+.sesamm-app__city {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px var(--primary);
+  border-radius: 20px;
+  width: 150px;
+  padding: 15px;
+  cursor: pointer;
+  &:hover {
+    color: #ffffff;
+    background-color: var(--primary);
+  }
+  &__left {
+    width: 100%;
+    &__name {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    &__country {
+      &__name {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+  &__right {
+    width: 100%;
+    &__weather {
+      display: flex;
+      flex-wrap: wrap;
+      &__temp {
+        width: 100%;
+      }
+    }
+  }
+}

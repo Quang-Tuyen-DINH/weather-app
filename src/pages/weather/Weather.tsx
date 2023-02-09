@@ -19,12 +19,14 @@ function Weather() {
   }) => {
     setFoundCities([]);
     setSelectedCity(null);
+    setError('');
     setAppId(coordinations.appId);
     await weatherService.findCities(coordinations.city, coordinations.appId)
       .then((response) => {
         setFoundCities(response.data.list);
       })
       .catch((err) => {
+        setError(err.response.data.message);
         console.log(err.response.data.message);
       });
   }
@@ -38,6 +40,7 @@ function Weather() {
         setSelectedCity(response.data);
       })
       .catch((err) => {
+        setError(err.message);
         console.log(err.message);
       });
   }
@@ -45,6 +48,7 @@ function Weather() {
   return (
     <div className='sesamm-app__weather'>
       <CityInput searchCity={findCity}/>
+      {error.length > 1 && <div className='sesamm-app__weather__error'>{error}</div>}
       {!selectedCity && <div className='sesamm-app__weather__cities-list'>
         {foundCities.map((city: City) => (
           <div key={city.id} onClick={() => getCity(city.coord)}>
