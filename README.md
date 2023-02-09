@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Zelty
+[Weather](https://weather-dinh.vercel.app/) is an application which permits to look for the weather forecast in a city.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Screenshot](./src/assets/demo/city-list.jpg)
+![Screenshot](./src/assets/demo/city-details.jpg)
 
-## Available Scripts
+## Table of contents
+* How to install and Run Weather application
+    * Clone Weather
+    * Install necessary modules
+    * Run Weather
+* Weather application's tructure
+* How to use Weather
+    * Cities list
+    * City details
 
-In the project directory, you can run:
 
-### `npm start`
+## How to install and Run Weather application
+### Clone and install
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+# Clone this repository
+$ git clone https://github.com/Quang-Tuyen-DINH/weather-app.git
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Go into the directory
+$ cd weather-app
+```
 
-### `npm test`
+### Install necessary modules
+While in the application directory
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Install dependencies
+$ npm install
+```
 
-### `npm run build`
+### Run Weather
+To start the application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Run the app
+$ npm run start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Weather application's structure
+```bash
+root/
+├─ public/
+├─ src/
+│  ├─ assets/
+│  ├─ components/
+│  │  ├─ forms/
+│  │  ├─ ui/
+│  ├─ pages/
+│  ├─ routes/
+│  ├─ services/
+│  │  ├─ openweathermap/
+│  ├─ shared/
+│  │  ├─ models/
+├─ .env
+├─ package.json
+├─ tsconfig.json
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to use Weather
+From Landing Page `http://localhost:3000/`, user can access to Weather page `http://localhost:3000/weather` by clicking the `Weather` button in navigation bar
 
-### `npm run eject`
+### Cities List
+At the Catalogue page `http://localhost:3000/catalogue`, user need an API key and the keyword to search for the desired city, in order to do that, user has to register the API key at `https://home.openweathermap.org/`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+After filling the city name and the API key, user can hit the Search button, then a list of cities will appear with the city name and zone for a quick overview, and user will be able to click on the prefered city card for more details.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### City details
+By clicking a card, the application will show more details about the choosen city such as temperature, humidity, visibility, etc.
