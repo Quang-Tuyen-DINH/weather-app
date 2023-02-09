@@ -8,8 +8,6 @@ const [city, setCity] = useState<string>('');
 const [appId, setAppId] = useState<string>('');
 
 const handleSearch = () => {
-  console.log(city)
-  console.log(appId)
   props.searchCity({
     city: city,
     appId: appId
