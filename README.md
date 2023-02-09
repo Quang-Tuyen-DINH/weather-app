@@ -1,4 +1,4 @@
-# Zelty
+# Weather
 [Weather](https://weather-dinh.vercel.app/) is an application which permits to look for the weather forecast in a city.
 
 ![Screenshot](./src/assets/demo/city-list.jpg)
