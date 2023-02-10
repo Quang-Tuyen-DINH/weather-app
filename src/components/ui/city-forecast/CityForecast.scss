@@ -2,11 +2,8 @@
   margin: 40px 0 0 0;
   display: flex;
   justify-content: center;
-  &__hourly {
-    width: 30%; 
-  }
   &__main {
-    width: 40%;
+    width: 55%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -75,7 +72,7 @@
     }
   }
   &__daily {
-    width: 30%;
+    width: 45%;
     display: flex;
     flex-wrap: wrap;
     &__day {

@@ -30,9 +30,6 @@ function CityForecast(props: {cityDetails: CityDetails}) {
 
   return (
     <div className='sesamm-app__city-forecast'>
-      <div className='sesamm-app__city-forecast__hourly'>
-
-      </div>
       <div className='sesamm-app__city-forecast__main'>
         <div className='sesamm-app__city-forecast__main__header'>
           <span className='sesamm-app__city-forecast__main__header__timezone'>{city}, {zone}</span>
