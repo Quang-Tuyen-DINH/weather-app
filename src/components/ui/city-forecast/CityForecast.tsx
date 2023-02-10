@@ -3,6 +3,7 @@ import { CityDetails } from '../../../shared/models/CityDetails.model'
 import './CityForecast.scss';
 
 function CityForecast(props: {cityDetails: CityDetails}) {
+  console.log(props.cityDetails)
   const [zone, setZone] = useState<string>('');
   const [city, setCity] = useState<string>('');
 
@@ -33,7 +34,7 @@ function CityForecast(props: {cityDetails: CityDetails}) {
           <div className='sesamm-app__city-forecast__main__body__left'>
             <img
               className='sesamm-app__city-forecast__main__body__left__icon'
-              src={`https://openweathermap.org/img/wn/${props.cityDetails.current.weather[0].icon}@4x.png`}
+              src={`${process.env.REACT_APP_ICON_API}/${props.cityDetails.current.weather[0].icon}@4x.png`}
               alt={props.cityDetails.current.weather[0].main}
             />
           </div>
@@ -41,6 +42,7 @@ function CityForecast(props: {cityDetails: CityDetails}) {
             <span className='sesamm-app__city-forecast__main__body__right__degree'>{props.cityDetails.current.temp}°C</span>
             <span className='sesamm-app__city-forecast__main__body__right__feels-like'>Feels like {props.cityDetails.current.feels_like}°C</span>
             <span className='sesamm-app__city-forecast__main__body__right__description'>{props.cityDetails.current.weather[0].description.toLocaleUpperCase()}</span>
+            <span className='sesamm-app__city-forecast__main__body__right__uv'>UV: {props.cityDetails.current.uvi}</span>
             <span className='sesamm-app__city-forecast__main__body__right__humidity'>Humidity: {props.cityDetails.current.humidity}</span>
             <span className='sesamm-app__city-forecast__main__body__right__visibility'>Visibility: {props.cityDetails.current.visibility}m</span>
           </div>

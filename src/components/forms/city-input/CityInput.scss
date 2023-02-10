@@ -14,7 +14,7 @@
         margin: 10px 0 0 0;
         background: white;
         border: 2px solid var(--primary);
-        border-radius: 10px;
+        border-radius: 30px;
         padding: 0.8rem 1.6rem;
         width: 200px;
       }
@@ -27,7 +27,7 @@
         margin: 10px 0 0 0;
         background: white;
         border: 2px solid var(--primary);
-        border-radius: 10px;
+        border-radius: 30px;
         padding: 0.8rem 1.6rem;
         width: 200px;
       }
@@ -41,7 +41,7 @@
     color: white;
     cursor: pointer;
     padding: 0.9rem 1rem;
-    border-radius: 10px;
+    border-radius: 30px;
     &:hover {
       background: var(--secondary);
     }
