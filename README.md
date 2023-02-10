@@ -1,8 +1,8 @@
 # Weather
 [Weather](https://weather-dinh.vercel.app/) is an application which permits to look for the weather forecast in a city.
 
-![Screenshot](./src/assets/demo/city-list.jpg)
-![Screenshot](./src/assets/demo/city-details.jpg)
+![Screenshot](./src/assets/demo/cities-list.jpg)
+![Screenshot](./src/assets/demo/city-daily-details.jpg)
 
 ## Table of contents
 * How to install and Run Weather application
