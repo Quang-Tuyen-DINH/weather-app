@@ -1,10 +1,12 @@
+import { Daily } from "./Daily.model";
 import { Weather } from "./Weather.model";
 
 export interface CityDetails {
   lat: number,
   lon: number,
   timezone: string,
-  current: Current
+  current: Current,
+  daily: Daily[]
 }
 
 interface Current {
