@@ -67,7 +67,7 @@ root/
 From Landing Page `http://localhost:3000/`, user can access to Weather page `http://localhost:3000/weather` by clicking the `Weather` button in navigation bar
 
 ### Cities List
-At the Catalogue page `http://localhost:3000/catalogue`, user need an API key and the keyword to search for the desired city, in order to do that, user has to register the API key at `https://home.openweathermap.org/`.
+At the Weather page `http://localhost:3000/weather`, user need an API key and the keyword to search for the desired city, in order to do that, user has to register the API key at `https://home.openweathermap.org/`.
 
 After filling the city name and the API key, user can hit the Search button, then a list of cities will appear with the city name and zone for a quick overview, and user will be able to click on the prefered city card for more details.
 
