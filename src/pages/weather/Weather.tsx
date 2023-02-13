@@ -11,7 +11,6 @@ function Weather() {
   const [appId, setAppId] = useState<string>('');
   const [foundCities, setFoundCities] = useState<City[]>([]);
   const [selectedCity, setSelectedCity] = useState<CityDetails | null>();
-  const [error, setError] = useState<string>('');
 
   const findCity = async (coordinations: {
     city: string,
@@ -19,36 +18,22 @@ function Weather() {
   }) => {
     setFoundCities([]);
     setSelectedCity(null);
-    setError('');
     setAppId(coordinations.appId);
-    await weatherService.findCities(coordinations.city, coordinations.appId)
-      .then((response) => {
-        setFoundCities(response.data.list);
-      })
-      .catch((err) => {
-        setError(err.response.data.message);
-        console.log(err.response.data.message);
-      });
+    const response = await weatherService.findCities(coordinations.city, coordinations.appId);
+      setFoundCities(response.data.list);
   }
 
   const getCity = async (coordinations: {
     lon: number,
     lat: number
   }) => {
-    await weatherService.getCity(coordinations.lon, coordinations.lat, appId)
-      .then((response) => {
-        setSelectedCity(response.data);
-      })
-      .catch((err) => {
-        setError(err.message);
-        console.log(err.message);
-      });
+    const response = await weatherService.getCity(coordinations.lon, coordinations.lat, appId);
+    setSelectedCity(response.data);
   }
   
   return (
     <div className='sesamm-app__weather'>
       <CityInput searchCity={findCity}/>
-      {error.length > 1 && <div className='sesamm-app__weather__error'>{error}</div>}
       {!selectedCity && <div className='sesamm-app__weather__cities-list'>
         {foundCities.map((city: City) => (
           <div key={city.id} onClick={() => getCity(city.coord)}>
