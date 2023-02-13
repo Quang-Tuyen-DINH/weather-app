@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './CityInput.scss';
 
 function CityInput(props: {
-  searchCity: any
+  searchCity: Function
 }) {
 const [city, setCity] = useState<string>('');
 const [appId, setAppId] = useState<string>('');
@@ -14,7 +14,7 @@ const handleSearch = () => {
   });
 }
 
-const handleKeyDown = (event: any) => {
+const handleKeyDown = (event: React.KeyboardEvent) => {
   if(event.key === 'Enter') {
     handleSearch();
   }
